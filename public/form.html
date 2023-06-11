@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/styles.css">
+    <title>Portex - Form</title>
+</head>
+<body class="text-gray-700">
+    <div> <!-- content wrapper -->
+        <div class="bg-primary px-4  md:px-16 lg:px-32 2xl:px64"> <!-- sides -->
+            <nav class="bg-white pt-2 pb-4"> <!-- nav bar begins-->
+                <div class="flex justify-center md:justify-between whitespace-nowrap">
+                    <!-- desktop nav -->
+                    <div class="hidden md:flex px-2 w-32 items-center text-gray-900">
+                        <div class="px-2 hover:text-gray-200 transition duration-300">
+                            <a href="index.html">
+                                <span class="bg-secondary-100 flex justify-center w-32 px-4 py-4 hover:bg-red-700 transition duration-300">Home</span>
+                            </a>
+                        </div>
+                        <div class="px-2 hover:text-gray-200 transition duration-300">
+                            <a href="product.html">
+                                <span class="bg-secondary-100 flex justify-center w-32 px-4 py-4 hover:bg-red-700 transition duration-300">Services</span>
+                            </a>
+                        </div>
+                        <div class="px-2 hover:text-gray-200 transition duration-300">
+                            <a href="about.html">
+                                <span class="bg-secondary-100 flex justify-center w-32 px-4 py-4 hover:bg-red-700 transition duration-300">About Us</span>
+                            </a>
+                        </div>
+                        <div class="px-2 hover:text-gray-200 transition duration-300">
+                            <a href="contact.html">
+                                <span class="bg-secondary-100 flex justify-center w-32 px-4 py-4 hover:bg-red-700 transition duration-300">Contact Us</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                    <!-- logo -->
+                        <div class="w-48 flex md:hidden cs:w-48 cs2:w-28 cs2:flex">
+                            <img src="./resources/img/logo.png" alt="logo">
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile nav -->
+                <div class="md:hidden text-center">
+                    <a href="index.html" class="block py-2 px-4 hover:bg-gray-100">Home</a>
+                    <a href="product.html" class="block py-2 px-4 hover:bg-gray-100">Services</a>
+                    <a href="contact.html" class="block py-2 px-4 hover:bg-gray-100">Contact Us</a>
+                    <a href="about.html" class="block py-2 px-4 hover:bg-gray-100">About Us</a>
+                    <div class="flex justify-center pt-4">
+                        <!-- Call to action -->
+                        <button class="pd-4 bg-secondary-300 hover:bg-red-800 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                <a href="form.html">
+                                    <span class="uppercase">Request Service</span>
+                                </a>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <main class="bg-white px-4">
+                <h1 class="flex justify-center text-4xl">Service Request Form</h1>
+                <!-- Form -->
+                <div id="form">
+                    <div class="container">
+                        <form name="servicereq" action="sent.html" onsubmit="return validateForm()" method="post" class="space-y-8 pb-4">
+                            <div>
+                                <label for="fname" class="block mb-2">Firstname:</label>
+                                <input type="text" id="fname" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" required>
+                            </div>
+                            <div>
+                                <label for="lname" class="block mb-2">Lastname:</label>
+                                <input type="text" id="lname" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" required>
+                            </div>
+                            <div>
+                                <label for="numstreet" class="block mb-2">Number & Street:</label>
+                                <input type="text" id="numstreet" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" required>
+                            </div>
+                            <div>
+                                <label for="suburb" class="block mb-2">Suburb:</label>
+                                <input type="text" id="suburb" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" required>
+                            </div>
+                            <div>
+                                <label for="city" class="block mb-2">City:</label>
+                                <input type="text" id="city" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-2">Phone Number:</label>
+                                <input type="tel" id="phone" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm" placeholder="0800 294 6832" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2">Email address:</label>
+                                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 shadow-sm-light" placeholder="example@wintec.com" required>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block mb-2">Comment:</label>
+                                <textarea id="message" rows="6" class="block p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300" placeholder="Please give any key details about the problem..."></textarea>
+                            </div>
+                            <div>
+                                <p>Note: Portex currently only operates within Hamilton ciy.</p>
+                            </div>
+                            <button type="submit" class="pd-4 bg-secondary-300 hover:bg-red-800 text-white font-bold py-2 px-4 rounded transition duration-300 text-center">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </main> <!-- main end -->
+        </div>
+    <div>
+        <footer class="bg-black text-gray-300 px-4 pt-2 pb-4">
+            <div class="md:flex md:justify-between whitespace-nowrap">
+                <h1 class="flex pb-4">
+                    Created by Ethan Deakin | 22529799
+                </h1>
+                <div class="flex">
+                    <a href="https://www.wintec.ac.nz/">
+                        <img src="./resources/img/wintec.png" alt="wintec" width="100">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- JavaScript -->
+<script src="./resources/js/script.js"></script>
